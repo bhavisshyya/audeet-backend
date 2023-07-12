@@ -9,6 +9,7 @@ const customerSchema = new mongoose.Schema(
       },
       phoneNo: {
          type: String,
+         minlength: [10, "enter a 10 digit mobile number"],
          validate: validator.isMobilePhone,
       },
       email: {
@@ -31,7 +32,8 @@ const customerSchema = new mongoose.Schema(
          type: Bool,
       },
       isCustomer: {
-         type: Bool, // if false -> supplier
+         type: String, // if false -> supplier
+         enum: ["customer", "supplier"],
       },
    },
    { timestamps: true },
