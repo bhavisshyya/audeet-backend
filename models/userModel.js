@@ -47,6 +47,18 @@ const userSchema = new mongoose.Schema(
             ref: "Supplier",
          },
       ],
+      purchases: [
+         {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "Purchase",
+         },
+      ],
+      expances: [
+         {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "Expance",
+         },
+      ],
    },
    { timestamps: true },
 );

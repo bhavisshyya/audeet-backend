@@ -9,6 +9,8 @@ import "express-async-errors";
 import authRoutes from "./routes/authRoute.js";
 import customerRoute from "./routes/customerRoute.js";
 import supplierRoute from "./routes/supplierRoute.js";
+import purchaseRoutes from "./routes/purchaseRoutes.js";
+import expanceRoute from "./routes/expanceRoutes.js";
 
 // error middleware
 import errorMiddelware from "./middlewares/errorMiddleware.js";
@@ -41,7 +43,8 @@ app.use(morgan("dev")); //logs which api route has been called and other info
 app.use("/api/v1/auth", authRoutes);
 app.use("/api/v1/customer", customerRoute);
 app.use("/api/v1/supplier", supplierRoute);
-
+app.use("/api/v1/purchase", purchaseRoutes);
+app.use("/api/v1/expance", expanceRoute);
 // error middleWare
 app.use(errorMiddelware);
 
