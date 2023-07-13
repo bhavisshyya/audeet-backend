@@ -11,6 +11,7 @@ import customerRoute from "./routes/customerRoute.js";
 import supplierRoute from "./routes/supplierRoute.js";
 import purchaseRoutes from "./routes/purchaseRoutes.js";
 import expanceRoute from "./routes/expanceRoutes.js";
+import invoiceRoutes from "./routes/invoiceRoutes.js";
 
 // error middleware
 import errorMiddelware from "./middlewares/errorMiddleware.js";
@@ -45,6 +46,7 @@ app.use("/api/v1/customer", customerRoute);
 app.use("/api/v1/supplier", supplierRoute);
 app.use("/api/v1/purchase", purchaseRoutes);
 app.use("/api/v1/expance", expanceRoute);
+app.use("/api/v1/invoice", invoiceRoutes);
 // error middleWare
 app.use(errorMiddelware);
 
