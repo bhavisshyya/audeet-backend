@@ -59,6 +59,12 @@ const userSchema = new mongoose.Schema(
             ref: "Expance",
          },
       ],
+      invoices: [
+         {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "Invoice",
+         },
+      ],
    },
    { timestamps: true },
 );
