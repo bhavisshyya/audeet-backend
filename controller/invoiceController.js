@@ -4,15 +4,13 @@ import Invoice from "../models/invoiceModel.js";
 export const generateInvoice = async (req, res, next) => {
    let data = {
       // Customize enables you to provide your own templates
-      // Please review the documentation for instructions and examples
       customize: {
          //  "template": fs.readFileSync('template.html', 'base64') // Must be base64 encoded html
       },
       images: {
          // The logo on top of your invoice
-         logo: "https://public.easyinvoice.cloud/img/logo_en_original.png",
+         logo: "https://i.ibb.co/1QDN23p/logo.png",
          // The invoice background
-         background: "https://public.easyinvoice.cloud/img/watermark-draft.jpg",
       },
       // Your own data
       sender: {
@@ -93,7 +91,7 @@ export const generateInvoice = async (req, res, next) => {
          // "price": "Prijs", // Defaults to 'Price'
          // "product-total": "Totaal", // Defaults to 'Total'
          // "total": "Totaal", // Defaults to 'Total'
-         // "vat": "btw" // Defaults to 'vat'
+         vat: "gst", // Defaults to 'vat'
       },
    };
 
