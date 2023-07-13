@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 import validator from "validator";
 
-const customerSchema = new mongoose.Schema(
+const supplierSchema = new mongoose.Schema(
    {
       name: {
          type: String,
@@ -30,10 +30,10 @@ const customerSchema = new mongoose.Schema(
       },
       toBeCollected: {
          type: Boolean,
-         default: "true",
+         default: "false",
       },
    },
    { timestamps: true },
 );
 
-export default mongoose.model("Customer", customerSchema);
+export default mongoose.model("Supplier", supplierSchema);

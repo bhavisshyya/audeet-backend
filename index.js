@@ -5,6 +5,11 @@ import morgan from "morgan";
 import cookieSession from "cookie-session";
 import "express-async-errors";
 
+// importing routes
+import authRoutes from "./routes/authRoute.js";
+import customerRoute from "./routes/customerRoute.js";
+import supplierRoute from "./routes/supplierRoute.js";
+
 // error middleware
 import errorMiddelware from "./middlewares/errorMiddleware.js";
 
@@ -31,6 +36,11 @@ app.use(
 );
 
 app.use(morgan("dev")); //logs which api route has been called and other info
+
+//routes
+app.use("/api/v1/auth", authRoutes);
+app.use("/api/v1/customer", customerRoute);
+app.use("/api/v1/supplier", supplierRoute);
 
 // error middleWare
 app.use(errorMiddelware);
